@@ -1,0 +1,213 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    box-sizing: border-box;
+    color: #000000;
+    font-size: 18px;
+}
+
+/***********navigation bar***********/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0px 2px 4px #0000000f;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.nav {
+    float: left;
+}
+/*  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.active {
+    background-color: #04AA6D;
+}
+*/
+/***********************************/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+    background-color: #fafafa;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 80%;
+}
+
+.note {
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    background: linear-gradient(to top right,#ffe47c, #f9d948, #f4b459, #f78258, #f04e42);;
+    padding: 30px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 5px 5px #4d4d4d4b, 0px 0px 20px #5656564e;
+    transition-duration: 0.5s;
+}
+
+.password-box {
+    position: relative;
+    text-shadow: none;
+}
+
+#toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 45%;
+    transform: translateY(-60%);
+    cursor: pointer;
+}
+
+#eye-icon {
+    width: 35px;
+    height: 35px;
+    color: #000000;
+    opacity: 30%;
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: #000000;
+    margin: 10px 0px 10px 0px;
+    font-size: medium;
+    text-shadow: 1px 1px #00000059;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #f1f1f1;
+    border-radius: 8px;
+    accent-color: black;
+    color: #000000;
+    transition-duration: 0.5s;
+}
+
+input:focus {
+    outline: none;
+    border: #000000 2px solid;
+    box-shadow: 0px 0px 10px #000000;
+    transition-duration: 0.4s;
+    background-color: #2f2f2f8b;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #d1d1d1;
+    /*text-align: center;*/
+    font-size: 16px;
+    font-style: italic;
+}
+
+button {
+    border: 2px solid #ff3d3d;
+    border-radius: 8px;
+    background-color: #ff2e2e;
+    color: #ffffff;
+    width: 50%;
+    padding: 10px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0px 0px 8px #ffffff;
+    margin: 20px 2px 10px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    font-size: larger;
+}
+
+button:hover, button:focus, button:active {
+    border: 2px solid #9d1f1f;
+    background-color: #ac0c0c;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px #cd0033, 0px 0px 10px #ffffff5d;
+}
+
+input:valid {
+    outline: none;
+    border: #ffffff 3px solid;
+    box-shadow: 0px 0px 5px #ffeb51;
+    transition-duration: 0.4s;
+}
+
+#status {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: -2px -2px 0 #500000, 2px -2px 0 #500000,
+                 -2px 2px 0 #500000, 2px 2px 0 #500000,
+                 0px 0px 5px #a80f0f, 0px 0px 10px #a80f0f;
+    transition-duration: 0.4s;
+}
+
+#message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: #000000;
+    text-shadow: 0px 0px 10px #212121;
+    transition-duration: 0.4s;
+}
+
+#check {
+    display: block;
+    color: #b10000;
+    font-size: medium;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 1px 1px #00000059;
+}

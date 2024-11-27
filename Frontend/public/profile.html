@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/alert.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/profile.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/alert.js" defer></script>
+    <title>Profile</title>
+</head>
+
+<body>
+    <section class="Header">
+        <nav>
+            <a id="logo" href="./main.html"><img src="img/reg-head.png" alt="reg-tu-logo"></a>
+            <ul>
+                <li><a href="./main.html">แบบฟอร์มคำร้อง</a></li>
+                <li><a href="./history.html">ประวัติคำร้อง</a></li>
+                <li><a href="./profile.html">ประวัติส่วนตัว</a></li>
+                <li><div onclick="logout()">ออกจากระบบ</div></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="profile">
+        <div class="content-header">
+            <div class="row" id="profile-text">
+                <h4>ประวัตินักศึกษา / แก้ไขข้อมูล</h4>
+            </div>
+        </div>
+
+        <div class="row" id="profile-content">
+            <div class="col" id="profile-picture">
+                <img src="img/profile-placeholder.png" alt="Profile Picture">
+            </div>
+            <div class="information-container">
+                <!-- Personal Information -->
+                <div class="row" id="information">
+                    <div class="row" id="red-line-text">
+                        <h4>ข้อมูลส่วนบุคคล</h4>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">ชื่อ</h4>
+                            <input type="text" class="info-box" id="info-box-thname" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">นามสกุล</h4>
+                            <input type="text" class="info-box" id="info-box-thlname" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">First name</h4>
+                            <input type="text" class="info-box" id="info-box-enname" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">Last name</h4>
+                            <input type="text" class="info-box" id="info-box-enlname" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">วัน เดือน ปี เกิด (วว/ดด/ปปปป)</h4>
+                            <input type="date" class="info-box" id="info-box-dob" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">คณะ</h4>
+                            <input type="text" class="info-box" id="info-box-faculty" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">สาขา</h4>
+                            <input type="text" class="info-box" id="info-box-major" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">ชั้นปี</h4>
+                            <input type="number" class="info-box" id="info-box-year" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">รหัสนักศึกษา</h4>
+                            <input type="text" class="info-box" id="info-box-id" value="" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address Information -->
+                <div class="row" id="information">
+                    <div class="row" id="red-line-text">
+                        <h4>ข้อมูลที่อยู่ (ที่อยู่ปัจจุบัน)</h4>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">ที่อยู่ปัจจุบัน (เลขที่,หมู่บ้าน)</h4>
+                            <input type="text" class="info-box" id="info-box-address" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">หมู่ที่</h4>
+                            <input type="text" class="info-box" id="info-box-moo" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">ถนน, แขวง/ตำบล</h4>
+                            <input type="text" class="info-box" id="info-box-subdistrict" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">เขต/อำเภอ</h4>
+                            <input type="text" class="info-box" id="info-box-district" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">จังหวัด</h4>
+                            <input type="text" class="info-box" id="info-box-state" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">รหัสไปรษณีย์</h4>
+                            <input type="text" class="info-box" id="info-box-postcode" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="row" id="information">
+                    <div class="row" id="red-line-text">
+                        <h4>ข้อมูลสำหรับติดต่อ และอื่นๆ</h4>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">เบอร์โทรศัพท์</h4>
+                            <input type="text" class="info-box" id="info-box-phone" value="">
+                        </div>
+                        <div class="col" id="info">
+                            <h4 class="info-header">Email</h4>
+                            <input type="email" class="info-box" id="info-box-email" value="">
+                        </div>
+                    </div>
+                    <div class="row" id="info-container">
+                        <div class="col" id="info">
+                            <h4 class="info-header">อาจารย์ที่ปรึกษา</h4>
+                            <input type="text" class="info-box" id="info-box-advisor" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="row" id="save-button-container">
+                    <button id="save-profile" class="save-button">บันทึกข้อมูล</button>
+                </div>
+            </div>
+    </section>
+    <section class="footer"></section>
+</body>
+</html>
